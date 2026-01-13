@@ -2,7 +2,7 @@ import { getOrders, updateOrderStatus } from '@/app/actions'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { BadgeJapanYen } from 'lucide-react'
+import { BadgeJapaneseYen } from 'lucide-react'
 
 // Helper component to display status cleanly
 function StatusBadge({ status }: { status: string }) {
