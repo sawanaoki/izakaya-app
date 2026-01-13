@@ -25,14 +25,14 @@ export default async function MenuPage() {
             </div>
 
             <div className="grid gap-6">
-                {categories.map((category) => (
+                {categories.map((category: any) => (
                     <Card key={category.id}>
                         <CardHeader>
                             <CardTitle>{category.name}</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-4">
-                                {category.items.map((item) => (
+                                {category.items.map((item: any) => (
                                     <div key={item.id} className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0">
                                         <div className="space-y-1">
                                             <p className="font-medium leading-none">{item.name}</p>
