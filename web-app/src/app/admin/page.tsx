@@ -25,7 +25,7 @@ function StatusBadge({ status }: { status: string }) {
 }
 
 export default async function AdminPage() {
-    let orders = []
+    let orders: any[] = []
     let error = null
 
     try {
