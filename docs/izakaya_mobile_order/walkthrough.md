@@ -59,7 +59,13 @@
 
 ## 技術詳細
 - **Frontend**: Next.js 16 (App Router), Tailwind CSS
-- **Backend/DB**: Server Actions, Prisma 5, SQLite
+- **Backend/DB**: Server Actions, Prisma 5, PostgreSQL (Neon)
 
-## ネットワーク環境での利用
-同一Wi-Fi内のスマホからアクセスする方法については、[こちらのガイド](./network_usage.md)を参照してください。
+## ネットワーク・公開環境での利用
+### 1. 公開環境 (Vercel)
+インターネット経由でどこからでもアクセス可能です。
+- **URL**: [https://izakaya-app.vercel.app/](https://izakaya-app.vercel.app/)
+- **管理者画面**: [/admin](https://izakaya-app.vercel.app/admin)
+
+### 2. ローカルネットワーク (Wi-Fi)
+同一Wi-Fi内のテスト等については、[こちらのガイド](./network_usage.md)を参照してください。
