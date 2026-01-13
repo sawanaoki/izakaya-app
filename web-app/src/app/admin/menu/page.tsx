@@ -18,12 +18,17 @@ export default async function MenuPage() {
                         提供するメニューの編集・在庫管理を行います
                     </p>
                 </div>
-                <Link href="/admin/menu/new">
-                    <Button>
-                        <PlusCircle className="mr-2 h-4 w-4" />
-                        新規商品追加
-                    </Button>
-                </Link>
+                <div className="flex gap-2">
+                    <Link href="/admin/categories">
+                        <Button variant="outline">カテゴリ管理</Button>
+                    </Link>
+                    <Link href="/admin/menu/new">
+                        <Button>
+                            <PlusCircle className="mr-2 h-4 w-4" />
+                            新規商品追加
+                        </Button>
+                    </Link>
+                </div>
             </div>
 
             <div className="grid gap-6">

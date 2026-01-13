@@ -98,3 +98,38 @@ export async function getMenuItem(id: number) {
         where: { id }
     })
 }
+
+export async function deleteOrder(orderId: number) {
+    await prisma.orderItem.deleteMany({
+        where: { orderId }
+    })
+    await prisma.order.delete({
+        where: { id: orderId }
+    })
+    revalidatePath('/admin')
+}
+
+export async function createCategory(name: string) {
+    await prisma.category.create({
+        data: { name }
+    })
+    revalidatePath('/admin/categories')
+    revalidatePath('/admin/menu')
+    revalidatePath('/')
+}
+
+export async function deleteCategory(id: number) {
+    const count = await prisma.menuItem.count({
+        where: { categoryId: id }
+    })
+    if (count > 0) {
+        throw new Error('このカテゴリには商品が登録されているため削除できません。')
+    }
+
+    await prisma.category.delete({
+        where: { id }
+    })
+    revalidatePath('/admin/categories')
+    revalidatePath('/admin/menu')
+    revalidatePath('/')
+}
