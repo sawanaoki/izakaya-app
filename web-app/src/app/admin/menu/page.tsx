@@ -1,7 +1,6 @@
 import { getCategories, toggleMenuItemAvailability } from '@/app/actions'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Switch } from '@/components/ui/switch' // Need to create Switch component or just use button for now
 import Link from 'next/link'
 import { PlusCircle } from 'lucide-react'
 
