@@ -25,7 +25,27 @@ function StatusBadge({ status }: { status: string }) {
 }
 
 export default async function AdminPage() {
-    const orders = await getOrders()
+    let orders = []
+    let error = null
+
+    try {
+        orders = await getOrders()
+    } catch (e: any) {
+        console.error('Failed to fetch orders:', e)
+        error = e.message || '注文データの取得に失敗しました。'
+    }
+
+    if (error) {
+        return (
+            <div className="p-8 text-center">
+                <h1 className="text-2xl font-bold text-red-600 mb-4">エラーが発生しました</h1>
+                <p className="text-muted-foreground mb-4">{error}</p>
+                <Link href="/admin">
+                    <Button>再試行</Button>
+                </Link>
+            </div>
+        )
+    }
 
     return (
         <div className="space-y-6">
