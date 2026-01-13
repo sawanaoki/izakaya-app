@@ -31,5 +31,11 @@
     - [x] 編集ページ作成
     - [x] 更新アクション実装
     - [x] 一覧からのリンク設定
+- [ ] 公開・デプロイ対応 (Vercel + PostgreSQL)
+    - [x] GitHubへのプッシュ
+    - [x] 公開方法の決定 (Vercel)
+    - [ ] Prismaスキーマの変更 (SQLite -> PostgreSQL)
+    - [ ] ローカル/Vercel環境変数の設定
+    - [ ] Vercelへのデプロイ
 - [ ] ドキュメント作成
     - [ ] `walkthrough.md` の作成

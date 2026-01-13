@@ -60,3 +60,6 @@
 ## 技術詳細
 - **Frontend**: Next.js 16 (App Router), Tailwind CSS
 - **Backend/DB**: Server Actions, Prisma 5, SQLite
+
+## ネットワーク環境での利用
+同一Wi-Fi内のスマホからアクセスする方法については、[こちらのガイド](./network_usage.md)を参照してください。
