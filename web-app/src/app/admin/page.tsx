@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { BadgeJapaneseYen } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 // Helper component to display status cleanly
 function StatusBadge({ status }: { status: string }) {
     const styles = {

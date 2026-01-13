@@ -1,5 +1,7 @@
 import prisma from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const categories = await prisma.category.findMany({
     include: { items: true },
