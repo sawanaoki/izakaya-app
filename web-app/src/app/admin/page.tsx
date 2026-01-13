@@ -78,7 +78,7 @@ export default async function AdminPage() {
                                 {new Date(order.createdAt).toLocaleTimeString('ja-JP')}
                             </div>
                             <ul className="space-y-2 mb-4">
-                                {order.items.map((item) => (
+                                {order.items.map((item: any) => (
                                     <li key={item.id} className="flex justify-between text-sm">
                                         <span>{item.menuItem.name} × {item.quantity}</span>
                                         <span className="font-mono">¥{item.menuItem.price * item.quantity}</span>
@@ -88,7 +88,7 @@ export default async function AdminPage() {
                             <div className="border-t pt-2 flex justify-between items-center font-bold">
                                 <span>合計</span>
                                 <span>
-                                    ¥{order.items.reduce((sum, item) => sum + item.menuItem.price * item.quantity, 0)}
+                                    ¥{order.items.reduce((sum: number, item: any) => sum + item.menuItem.price * item.quantity, 0)}
                                 </span>
                             </div>
 
