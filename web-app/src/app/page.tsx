@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma'
+import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
 
@@ -26,7 +27,7 @@ export default async function Home() {
         ))}
       </div>
       <div className="mt-8 text-center text-sm text-muted-foreground">
-        管理者の方は <a href="/admin" className="underline">こちら</a>
+        管理者の方は <Link href="/admin" className="underline">こちら</Link>
       </div>
     </main>
   )
