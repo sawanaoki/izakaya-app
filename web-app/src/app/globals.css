@@ -90,7 +90,12 @@
 /* Custom POP Utility Classes */
 @layer components {
   .pop-card {
-    @apply shadow-[8px_8px_0px_0px_rgba(0, 0, 0, 0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0, 0, 0, 0.15)] transition-all duration-300;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.1);
+    @apply transition-all duration-300;
+  }
+
+  .pop-card:hover {
+    box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 0.15);
   }
 
   .pop-button {
